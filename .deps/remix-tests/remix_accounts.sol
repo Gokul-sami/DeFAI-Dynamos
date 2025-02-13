@@ -7,9 +7,3 @@ library TestsAccounts {
         return address(0);
     }
 }
-
-library TestsAccountsDemo {
-    function getAccount(uint index) pure public returns (address) {
-        return address(0);
-    }
-}
