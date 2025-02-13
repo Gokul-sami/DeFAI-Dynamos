@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Market DApp</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Prediction Market DApp</h1>
+  <div id="form-container">
+    <h2>Submit a Prediction</h2>
+    <form id="predictionForm">
+      <label for="eventDescription">Event Description:</label>
+      <input type="text" id="eventDescription" name="eventDescription" required>
+      <label for="predictedValue">Predicted Value:</label>
+      <input type="number" id="predictedValue" name="predictedValue" required>
+      <label for="account">Your Account:</label>
+      <input type="text" id="account" name="account" placeholder="0x..." required>
+      <button type="submit">Submit Prediction</button>
+    </form>
+  </div>
+  <div id="predictions-container">
+    <h2>All Predictions</h2>
+    <table id="predictionsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Predictor</th>
+          <th>Event</th>
+          <th>Predicted Value</th>
+          <th>Resolved</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Predictions will be dynamically inserted here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
