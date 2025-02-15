@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { ethers } from "ethers";
+import { BrowserProvider, parseUnits } from "ethers";
+import { HDNodeWallet } from "ethers/wallet";
+
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.BrowserProvider(window.ethereum);
@@ -11,7 +14,9 @@ await provider.send("eth_requestAccounts", []);
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
 // For this, you need the account signer...
-const signer = provider.getSigner()
+const signer = provider.getSigner();
+console.log(signer+" My ethers: ");
+console.log(await provider.getBlockNumber());
 function App() {
   return (
     <div className="App">
